@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "BaccaratProject/BrunoBaccarat/bin/**/*.jar",
+        "BaccaratProject/BrunoBaccarat/lib/**/*.jar",
+        "BaccaratProject/**/*.jar"
+    ],
+    "java.dependency.packagePresentation": "flat"
+}
