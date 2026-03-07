@@ -24,7 +24,35 @@ public class Lab11_2 {
 		//Print the player's cards (8)
 		
 		//Print the deck again (9)
-		
+
+		ArrayList<String> deck = new ArrayList<String>();
+		populateArrayList(deck);
+		System.out.println("Deck before dealing:");
+		printDeck(deck);
+		System.out.println("\n");
+	
+
+		String[] player = new String[5];
+
+		for(int i=0;i < player.length; i++){
+			int r = (int)(Math.random() * deck.size());
+
+			player[i] = deck.remove(r);
+
+		}
+
+		System.out.println("Player's Cards: \n");
+
+		for(int i=0; i < player.length; i++){
+			
+			System.out.print(player[i]);
+			System.out.print(" ");
+		}
+		System.out.println("\n");
+		System.out.println("Deck after cards dealt:");
+		printDeck(deck);
+
+
 
 	}
 
