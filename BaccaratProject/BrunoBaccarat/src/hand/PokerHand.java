@@ -1,6 +1,11 @@
 package hand;
 
-public class PokerHand extends Hand{
+import cardtools.Solver;
+
+import java.util.ArrayList;
+import cardtools.PokerSolver;
+
+public class PokerHand extends Hand implements Solver{
 
     private String handDescr;
     private int handScore;
@@ -24,6 +29,24 @@ public class PokerHand extends Hand{
 
         return output;
 
+    }
+
+    public void evaluateHand(){
+
+        PokerSolver.evaluateHand(this);
+
+    }
+
+    public int[] compareHands(Hand... var1[]){
+
+        PokerHand[] alternateHand = new PokerHand[var1.length + 1];
+        alternateHand[0] = this;
+
+        for(int i = 0; i < var1.length; i++){
+            alternateHand[i+1] = (PokerHand) var1[i];
+
+        }
+        
     }
 
     public String getHandDescr() {

@@ -3,9 +3,12 @@ package hand;
 import java.util.ArrayList;
 import cards.Card;
 
-public class Hand {
+public abstract class Hand {
 
     protected ArrayList<Card> cards; 
+    public abstract void evaluateHand();
+    public abstract  int[] comparehands(Hand BaccaratHand, Hand PokerHand);
+    public abstract String showAttributes();
 
     public Hand(){
 
