@@ -12,7 +12,7 @@ public class BaccaratHand extends Hand{
 
     }
 
-    @Override
+    @Override //polymorphism 
     public String showAttributes(){
 
         String output = "Hand Points: ";
