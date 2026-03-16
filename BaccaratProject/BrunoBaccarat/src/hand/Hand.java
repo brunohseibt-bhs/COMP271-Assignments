@@ -7,8 +7,8 @@ public abstract class Hand {
 
     protected ArrayList<Card> cards; 
     public abstract void evaluateHand();
-    public abstract  int[] comparehands(Hand BaccaratHand, Hand PokerHand);
-    public abstract String showAttributes();
+    public abstract  int[] comparehands(Hand ... var1);
+    protected abstract String showAttributes();
 
     public Hand(){
 
@@ -56,7 +56,9 @@ public abstract class Hand {
 
     }
 
-    public String showAttributes(){
+    // I removed in order to 
+
+    /* public String showAttributes(){ 
 
         String output = "Hand Faces: ";
 
@@ -66,7 +68,7 @@ public abstract class Hand {
 
         return output;
 
-    }
+    } */
 
     @Override
     public String toString(){

@@ -37,7 +37,7 @@ public class PokerHand extends Hand implements Solver{
 
     }
 
-    public int[] compareHands(Hand... var1[]){
+    public int[] compareHands(Hand... var1){
 
         PokerHand[] alternateHand = new PokerHand[var1.length + 1];
         alternateHand[0] = this;
@@ -46,7 +46,9 @@ public class PokerHand extends Hand implements Solver{
             alternateHand[i+1] = (PokerHand) var1[i];
 
         }
-        
+
+        int[] result = PokerSolver.evaluatePokerGame(alternateHand);
+        return result; 
     }
 
     public String getHandDescr() {

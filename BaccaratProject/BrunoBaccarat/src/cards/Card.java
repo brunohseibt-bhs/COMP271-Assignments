@@ -58,7 +58,7 @@ public class Card {
         
     }
 
-    private int otherMethods(int rank ){
+    private int otherMethods( ){
         
         if (rank == 1) 
             return 1;
